@@ -1,0 +1,368 @@
+/* --------------- reset.css --------------- */
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, em, img, strong, sub, sup, b, u, i,  
+dl, dt, dd, ol, ul, li, fieldset, form, label, table, tbody, tfoot, thead, tr, th, td, 
+article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav,
+ section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;                               /* обнуляем отступы и убираем бордюры */
+	vertical-align: baseline;          /* приводим все к одной базовой линии */
+	background: transparent;      /* чтобы не проскакивали левые фоны, установленные по умолчанию */
+	font-size: 100%;                     /* размер шрифта всем одинаковый */
+}
+a {                                      	     /* ссылка не в общем списке чтобы не сбрасывать outline по умолчанию */
+	margin:0;
+	padding:0;
+	font-size:100%;
+	vertical-align:baseline;
+	background:transparent;
+	outline:none;
+}
+table {						/* устраняем отступы между ячейками таблицы */
+	border-collapse: collapse; 
+	border-spacing: 0;
+}
+td, td img {
+	vertical-align: top;			/* возвращаем привычное вертикальное выравнивание */
+} 
+input, select, button, textarea {
+	margin: 0; 				/* убираем отступы по умолчанию для элементов форм (в частности для checkbox и radio) */
+	font-size: 100%; 			/* делаем размер шрифтов везде одинаковым */
+	outline: none;
+}
+input[type="text"], input[type="password"], textarea {
+	padding: 0; 				/* убираем внутренние отступы для текстовых полей */
+}
+input[type="checkbox"] { 		/* вертикальное выравнивание чекбоксов и радиобатонов относительно меток */
+	vertical-align: bottom;
+}
+input[type="radio"] {
+	vertical-align: text-bottom;
+}
+sub {
+	vertical-align: sub;
+	font-size: smaller;
+}
+sup {
+	vertical-align: super;
+	font-size: smaller;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display:block;
+}
+nav ul {
+	 list-style:none;
+}
+/* --------------- /reset.css --------------- */
+
+/* --------------- базовые настройки ---------*/
+html {
+	min-height:100%; /* всегда показываем вертикальную полосу прокрутки  */
+}
+body {
+	color: #58c93a;
+	text-align: left;
+	font-size: 1em; /* используем безопасные шрифтовые CSS стеки */
+	min-height:100%;
+	font-family: 'Open Sans', sans-serif;
+}
+a, a:visited { /* порядок правил для ссылок имеет значение */
+	color: hsl(179, 50%, 50%);
+	text-decoration: none;
+}
+a:hover {
+	color:hsl(179, 50%, 40%);
+	text-decoration:none;
+}
+a:focus, a:active {
+	text-decoration: underline;
+}
+h1, h2, h3, h4, h5, h6{
+	font-weight:normal;
+}
+img{
+
+	max-width:100%;
+}
+.clr{
+	clear:both;
+}
+.clearfix:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+/* --------------- /базовые настройки ---------*/
+@font-face {
+	font-family: 'eurof55';
+	src: url(../fonts/eurof55.ttf);
+}
+header {
+	background-color: #292929;
+	overflow: hidden;
+}
+.center-main {
+	max-width: 990px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.logo{
+	float: left;
+	text-decoration: none;
+	padding-top: 33px;
+}
+
+.menu {
+	float: right;
+	line-height: 35px;
+}
+
+.menu li {
+	float: left;
+}
+
+.menu li a {
+	font-size: 17px;
+	font-weight: bold;
+	color: #fff;
+	overflow: hidden;
+	display: block;
+	padding: 35px 35px;
+	border-left: 1px solid #000;
+}
+.menu:last-child {
+	border-right: 1px solid #000;
+}
+
+.menu li a:hover {
+	color: #8bdfe2;
+	border-bottom: 3px solid #8bdfe2;
+	padding-bottom: 32px;
+}
+
+main {
+	float: left;
+	margin-top: 80px;
+	width: 62.5%;
+}
+aside {
+	float: right;
+	margin-top: 80px;
+	width: 28.3%;
+}
+.content {
+	max-width: 990px;
+	margin: 0 auto;
+	overflow: hidden;
+	border-right: 1px solid #e1e0e0;
+	border-left: 1px solid #e1e0e0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+article {
+	margin-bottom: 20px;
+}
+article>header {
+	font-size:0;
+	position: relative;
+	margin-bottom: 15px;
+}
+
+.publ {
+	font-size: 15px;
+	background-color: rgba(0,0,0,0.6);
+	color: white;
+	width: 100%;
+	position: absolute;
+	bottom: -60px;
+	padding: 10px 20px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-transition: bottom 0.3s;
+	-o-transition: bottom 0.3s;
+	transition: bottom 0.3s;
+}
+
+article>header:hover .publ {
+	bottom: 0;
+}
+
+article>h2{
+	margin: 0 0 40px 15px;
+	font-size: 1.8em;
+	font-weight: 800;
+	color: #4f4e4e;
+	text-transform: uppercase;
+	text-align: justify;
+	line-height: 1.1;
+}
+article>p{
+	margin: 0 0 20px 15px;
+	text-align: justify;
+	color: #606060;
+	font-size: 1.1em;
+	line-height: 1.2;
+}
+a.more{
+	color: #c2c2c2;
+	border: 2px solid #c2c2c2;
+	text-decoration: none;
+	display: inline-block;
+	padding: 10px 20px;
+	border-radius: 50px;
+	font-weight: bold;
+}
+a.more:hover{
+	border: 2px solid #8bdfe2;
+	color: #8bdfe2;
+}
+
+.widget {
+	margin-bottom: 50px;
+}
+
+.widget>h2{
+	text-transform: uppercase;
+	color: #6c6969;
+	font-weight: bold;
+	background-color: #f8f8f8; 
+	border-left: 3px solid #8bdfe2;
+	padding: 20px 20px;
+	margin-bottom: 20px;
+}
+
+.search{
+	color: #b9b9b9;
+	padding: 20px 20px;
+	border: 1px solid #e1e1e0;
+	border-right: none;
+	width: 100%;
+	font-size: 0.9em;
+}
+
+.widget>nav {
+	margin-left: 20px;
+}
+.sbcr-position {
+	position: relative;
+	width: 100%;
+	height: 58px;
+}
+
+.sbcr-inp{
+	color: #b9b9b9;
+	padding: 20px 60px 20px 20px;
+	border: 1px solid #e1e1e0;
+	border-right: none;
+	font-size: 0.9em;
+	width: 100%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.sbcr-img {
+	position: absolute;
+	right: 25px;
+	top: 17px;
+}
+
+.pager {
+	color: #818181;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 1.125em;
+	padding: 30px;
+	border-top: 1px solid #e1e0e0;
+	padding-bottom: 50px;
+}
+.pager a{
+	color: #818181;
+}
+
+.pager a:hover {
+	color: #8bdfe2;
+}
+
+.prev{
+	float: left;
+}
+
+.next {
+	float: right;
+}
+
+footer {
+	background-color: #f8f8f8;
+	overflow: hidden;
+	border-top: 1px solid #e1e0e0;
+	padding: 50px;
+	text-align: center;
+}
+
+.footer {
+	max-width: 990px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.footer p {
+	color: #a6a6a6;
+	font-size: 0.9em;
+}
+
+@media screen and (max-width:768px) {
+	main {
+	float: none;
+	margin-top: 15px;
+	width: 100%;
+	}
+	header img{
+	width:100%;
+	}
+	aside {
+	float: none;
+	margin-top: 15px;
+	width: 100%;
+	}
+	article>h2{
+	margin: 0 15px 15px 15px;
+	}
+	.center-main a{
+	float: left;
+	text-decoration: none;
+	padding-top: 16px;
+	}
+	.menu li a {
+	padding: 18px 35px;
+	}
+	article>p{
+	margin: 0 15px 20px 15px;
+	}
+	.menu li a:hover {
+	padding-bottom: 15px;
+	}
+}
+
+@media screen and (max-width:660px) {
+	.menu li a {
+	padding: 18px 35px;
+	}
+	.menu li a:hover {
+	padding-bottom: 15px;
+	}
+}
+
+
+
+
+/*
+border-top: 1px solid #e1e0e0;
+
+*/
